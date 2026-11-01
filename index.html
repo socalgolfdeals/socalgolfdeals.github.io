@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Ticker · Golf deals near you</title><meta name="description" content="Live tee-time deals across Orange County and the Inland Empire."><meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%2300C805'/%3E%3C/svg%3E">
+<link rel="preload" href="data.json" as="fetch" crossorigin><link rel="stylesheet" href="app.css"></head><body>
+<main class="w">
+<header class="top"><b class="brand">Ticker</b><button id="locBtn" class="loc" type="button">📍 <span id="locLbl">Set location</span></button></header>
+<div class="seg" role="radiogroup" aria-label="Players" id="seg"></div>
+<section id="hero" aria-live="polite"><div class="mut">Lowest weekend-morning tee time</div><div class="big sk" id="heroP">&nbsp;</div><div id="heroSub" class="g sub"></div></section>
+<div id="locSheet" class="sheet" hidden><div class="sheetIn" role="dialog" aria-labelledby="lsT"><b id="lsT">Where are you starting from?</b><p class="mut">We use it only to show miles away. It stays on this device.</p>
+<button id="geoBtn" class="btn" type="button">Use my location</button><form id="zipF" class="zipF"><label for="zip" class="vh">ZIP code</label><input id="zip" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="ZIP code" autocomplete="postal-code"><button class="btn o" type="submit">Set</button></form><div id="zipErr" class="err" role="alert"></div><button id="lsClose" class="link" type="button">Not now</button></div></div>
+<nav class="chips" id="chips" aria-label="Searches"></nav>
+<section><h2>Deals · next 3 weeks</h2><div class="dl" id="deals"><div class="dcard sk"></div><div class="dcard sk"></div></div></section>
+<section><div class="h2r"><h2 id="listT">Weekend mornings</h2><label class="vh" for="sort">Sort</label><select id="sort"><option value="value">Best value</option><option value="price">Lowest price</option><option value="dist">Closest</option><option value="rating">Top rated</option></select></div>
+<div id="list"><div class="row sk"></div><div class="row sk"></div><div class="row sk"></div></div></section>
+<footer class="mut" id="foot"></footer></main>
+<script src="app.js" defer></script></body></html>
